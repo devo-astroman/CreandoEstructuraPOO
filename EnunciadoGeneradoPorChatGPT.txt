@@ -48,3 +48,25 @@ public float BonusVelocidad
 
 private bool _consumida
 Para no aplicar el efecto dos veces.
+
+
+2da Iteración - después de pedir unos métodos a ChatGPT:
+🦆 Clase: PatoPiloto
+
+MontarPatinete()
+    El pato intenta subirse al patinete. Si lo tiene, se asigna como piloto. Si no, muestra un mensaje indicando que no tiene patinete. Llama a un método del 
+AcelerarPatinete()
+    Ordena al patinete acelerar hacia adelante. Si el pato no tiene patinete asignado, no puede hacerlo.
+    Invoca el método Acelerar() en el PatineteLaser.
+
+
+🛴 Clase: PatineteLaser
+
+AsignarPiloto(PatoPiloto piloto)
+    Guarda una referencia al pato que está montando el patinete. No cambia movimiento, solo registra quién lo está usando.
+    Recibe un objeto PatoPiloto y lo almacena internamente.
+Recargar()
+    Llena nuevamente la batería del patinete al 100%.
+    No necesita interacción con otras clases.
+
+

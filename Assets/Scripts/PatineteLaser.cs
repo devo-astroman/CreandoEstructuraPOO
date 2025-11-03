@@ -10,4 +10,14 @@ public class PatineteLaser : MonoBehaviour
     public PatoPiloto ObtenPiloto(){ 
         return _piloto;
     }
+
+    public void AsignarPiloto(PatoPiloto piloto)
+    {
+        //Debe asignar el piloto
+    }
+
+    public void Recargar()
+    {
+        //Recarga la batería del patinete
+    }
 }

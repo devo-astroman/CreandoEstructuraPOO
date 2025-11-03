@@ -11,4 +11,14 @@ public class PatoPiloto : MonoBehaviour
         return _patinete;
     }
 
+    public void MontarPatinete()
+    {
+        //Aquí debe montar el patinete
+    }
+
+    public void AcelerarPatinete()
+    {
+        //Acelera el patinete
+    }
+
 }

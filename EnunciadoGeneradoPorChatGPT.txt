@@ -1,0 +1,50 @@
+Prompt:
+Quiero que me crees una propuesta de estructura POO, que yo implementaré en unity, dime las clases que hay, que atributos tienen, publicas y privadas. Alguno de los objetos debería referenciar a objetos de otro tipo. Como pasa en un inventario con los objetos de tipo item. Haz una propuesta de ejemplo, que no sea de inventario, relacionada con videojuegos, lo más original y divertida que puedas. Sencillo: , de 3 clases máximo y dos o tres atributos por clase.
+
+Respuesta de ChatGPT:
+¡Vamos con algo distinto al típico inventario!
+Te propongo un minijuego “Carrera de Patos Láser”: un pato corre sobre un patinete neón y puede comer donas turbo para acelerar. Son 3 clases, cada una con 2–3 atributos. Hay referencias entre objetos (composición simple) pensadas para arrastrar en el Inspector de Unity.
+
+Clases y atributos
+1) PatoPiloto
+
+El personaje controlable.
+
+public string Nombre
+Identificador visible (UI, tablas de tiempos).
+
+public float Energia
+“Resistencia” que baja al acelerar y sube con power-ups.
+
+private PatineteLaser _patinete
+Referencia al vehículo que usa el pato.
+
+Relación: PatoPiloto tiene un PatineteLaser.
+
+2) PatineteLaser
+
+El vehículo del pato.
+
+public float VelocidadMax
+Límite superior de velocidad.
+
+public float Bateria
+Se consume al acelerar / se recarga con donas.
+
+private PatoPiloto _piloto
+Referencia opcional al piloto actual (quien lo conduce).
+
+Relación: PatineteLaser conoce a su PatoPiloto (opcional pero útil para callbacks).
+
+3) DonaTurbo
+
+Un power-up comestible.
+
+public string Sabor
+(vainilla, chocolate, arcoíris… para variedad/FX).
+
+public float BonusVelocidad
+% o cantidad de acelerón al comerse.
+
+private bool _consumida
+Para no aplicar el efecto dos veces.
